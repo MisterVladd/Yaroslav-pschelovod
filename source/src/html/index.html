@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ярослав Пчеловодище</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    @@include('blocks/header.html')
+    <main class="main">
+      <div class="container">
+        @@include('blocks/welcome.html')
+        @@include('blocks/experience.html')
+        @@include('blocks/about.html')
+        @@include('blocks/skillset.html')
+        @@include('blocks/projects.html')
+        @@include('blocks/instagram.html')
+        @@include('blocks/dribbble.html')
+        @@include('blocks/comment.html')
+        @@include('blocks/photography.html')
+        @@include('blocks/forms.html')
+	  </div>
+    </main>
+    @@include('blocks/footer.html')
+    <script src="./js/index.bundle.js"></script>
+    <script>
+      function navToggle() {
+        document.getElementById("headerUl").classList.toggle("_active");
+        document.getElementById("headerBackdrop").classList.toggle("_active");
+      }
+    </script>
+  </body>
+</html>

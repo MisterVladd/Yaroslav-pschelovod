@@ -1,0 +1,117 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 72px;
+	position: relative;
+	z-index: 6;
+	@include mobile{
+		padding: 0rem 20rem;
+	}
+
+
+
+	.block {
+		position: absolute;
+		width: 63%;
+		height: 900rem;
+		background: var(--level-1);
+		z-index: 1;
+		right: 0;
+	}
+
+	&__logo {
+		padding: 32rem 0rem;
+		@include mobile{
+			padding: 24rem 0;
+		}
+	}
+
+	&__backdrop {
+		background: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		transform: translateX(120%);
+		display: none;
+		transition: var(--transition);
+		opacity: 0;
+
+		@include tablet {
+			display: block;
+		}
+
+		&._active {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	&__items {
+		display: flex;
+		align-items: center;
+		z-index: 9;
+		z-index: 3;
+
+
+
+		.primary {
+			padding: 34rem 24rem;
+			background: var(--purple);
+			font-weight: 400;
+			font-size: 16rem;
+			line-height: 150%;
+			color: var(--white);
+		}
+
+		@include tablet {
+			z-index: 9;
+			position: fixed;
+			width: 70%;
+			height: 100%;
+			flex-direction: column;
+			left: 0;
+			top: 0;
+			background: var(--level-1);
+			align-items: center;
+			justify-content: center;
+			transform: translateX(-120%);
+			transition: var(--transition);
+		}
+
+		&._active {
+			transform: translateX(0);
+		}
+
+		.icon-close {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			color: var(--c-text-white);
+		}
+	}
+
+	&__item {
+		margin: 34rem 24rem;
+		font-weight: 400;
+		font-size: 16rem;
+		line-height: 150%;
+		color: var(--white);
+
+
+
+	}
+}
+
+.icon-menu,
+.icon-close {
+	cursor: pointer;
+	display: none;
+
+	@include tablet {
+		display: inline-block;
+	}
+}

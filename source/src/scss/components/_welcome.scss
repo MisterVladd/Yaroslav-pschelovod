@@ -1,0 +1,115 @@
+.welcome {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+    &__img {
+        width: 55vw;
+        flex-shrink: 0;
+        height: 80vh;
+        z-index: -2;
+    }
+
+    &__bg {
+        background: var(--level-1);
+        position: absolute;
+        right: 0;
+        top: -10%;
+        height: 110vh;
+        width: 65vw;
+        z-index: -3;
+    }
+
+    &__text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        right: 0;
+        top: -10%;
+        height: 110vh;
+        width: 65vw;
+        padding-right: 40rem;
+
+        @include desktop-avg {
+            padding-left: 140rem;
+            padding-right: 30rem;
+        }
+
+        @include desktop-small {
+            padding-left: 90rem;
+            top: -20%;
+            padding-right: 30rem;
+        }
+
+
+        &__title {
+            font-weight: 700;
+            font-size: 76rem;
+            color: var(--white);
+            margin-bottom: 32rem;
+            z-index: 4;
+
+            @include desktop-avg {
+                max-width: 780rem;
+            }
+
+            @include desktop-small {
+                font-size: 50rem;
+            }
+
+
+            span {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        &__desc {
+            font-weight: 400;
+            font-size: 18rem;
+            line-height: 150%;
+            color: var(--white);
+
+            @include desktop-avg {
+                max-width: 780rem;
+            }
+        }
+    }
+
+    @include tablet-small {
+        display: none;
+    }
+}
+
+.welcome-mobile {
+    display: none;
+
+    @include tablet-small {
+        display: block;
+    }
+
+    &__img {}
+
+    &__text {
+        padding: 48rem 20rem;
+        background: var(--level-1);
+        &__title {
+            font-weight: 700;
+            font-size: var(--mobile-title);
+            color: var(--white);
+            margin-bottom: 16rem;
+
+            span {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        &__desc {
+            font-weight: 400;
+            font-size: 18rem;
+            line-height: 150%;
+            color: var(--white);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 1px;
+}
+
+body {
+	font-size: 16rem;
+	font-family: var(--font-family);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	color: var(--white);
+	background: var(--black);
+
+
+}
+
+.container {
+	max-width: 1920px;
+	margin-inline: auto;
+}
+
+.main {}

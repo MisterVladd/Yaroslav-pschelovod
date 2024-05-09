@@ -1,0 +1,106 @@
+.projects {
+    padding: var(--standart-margin);
+
+    @include tablet {
+        padding: var(--tablet-margin);
+    }
+
+    @include mobile {
+        padding: var(--mobile-margin);
+    }
+
+    display: flex;
+    gap: 24rem;
+    justify-content: center;
+
+    // align-items: center;
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &__block {
+        max-width: 636rem;
+
+        &__desc {
+            font-weight: 700;
+            font-size: 16rem;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: var(--light-grey);
+            margin-bottom: 8rem;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 55rem;
+            color: var(--white);
+            margin-bottom: 81rem;
+            max-width: 588rem;
+
+            @include tablet {
+                font-size: var(--mobile-title);
+                margin-bottom: 40rem;
+            }
+        }
+
+        &__items {
+            display: grid;
+            gap: 24rem;
+
+        }
+
+        &__item {
+
+            background: var(--level-1);
+
+            &__text {
+                padding: 40rem 32rem;
+
+                @include tablet-small {
+                    padding: 24rem 20rem;
+                }
+
+                &__img {}
+
+                &__title {
+                    font-weight: 700;
+                    font-size: 24rem;
+                    color: var(--white);
+                    margin-bottom: 16rem;
+                }
+
+                &__desc {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 18rem;
+                    line-height: 150%;
+                    color: var(--light-grey);
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60rem;
+
+            @include mobile {
+                display: none;
+            }
+
+            button {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 18rem;
+                line-height: 150%;
+                text-transform: uppercase;
+                padding: 24rem 32rem;
+                border: 1px solid var(--purple);
+                color: var(--white);
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

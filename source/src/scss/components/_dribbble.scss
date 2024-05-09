@@ -1,0 +1,82 @@
+.dribbble {
+    margin: var(--vertical-margin) 182rem;
+
+    @include tablet {
+        margin: var(--tablet-margin);
+    }
+
+    @include mobile {
+        margin: var(--mobile-margin);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 55rem;
+        color: var(--white);
+        margin-bottom: 24rem;
+        @include mobile{
+            font-size: var(--mobile-title);
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 18rem;
+        line-height: 150%;
+        color: var(--light-grey);
+        margin-bottom: 40rem;
+    }
+
+    &__link {
+        position: relative;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16rem;
+        line-height: 150%;
+        color: var(--white);
+
+    }
+
+    &__link::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: var(--dark-grey);
+        bottom: -9px;
+        width: 100%;
+        height: 1px;
+    }
+
+    &__img {
+        margin-top: 134rem;
+        text-align: center;
+
+        @include mobile {
+            margin-top: 57rem;
+        }
+
+        .img-desctop,
+        .img-mobile {
+            border-radius: 19rem;
+        }
+
+        .img-desctop {
+            @include mobile {
+                display: none;
+            }
+
+
+        }
+
+        .img-mobile {
+            display: none;
+            width: 100%;
+
+            @include mobile {
+                display: block;
+
+            }
+
+        }
+    }
+}
